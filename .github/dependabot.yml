@@ -1,0 +1,26 @@
+version: 2
+updates:
+- package-ecosystem: nuget
+  directory: "/"
+  schedule:
+    interval: daily
+    time: "08:00"
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: Hangfire
+    versions:
+    - 1.7.19
+    - 1.7.20
+    - 1.7.21
+  - dependency-name: Microsoft.ApplicationInsights.DependencyCollector
+    versions:
+    - 2.16.0
+  - dependency-name: Microsoft.ApplicationInsights
+    versions:
+    - 2.16.0
+  - dependency-name: Microsoft.ApplicationInsights.PerfCounterCollector
+    versions:
+    - 2.16.0
+  - dependency-name: Microsoft.ApplicationInsights.Web
+    versions:
+    - 2.16.0
